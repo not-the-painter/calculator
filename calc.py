@@ -4,9 +4,10 @@ from tkinter import *
 
 root = Tk()
 root.title('Simple Calculator')
+root.geometry("415x390")
 
-e = Entry(root, width=35, borderwidth=5)
-e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+e = Entry(root, width=40, borderwidth=5)
+e.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
 
 def button_click(number):
@@ -71,14 +72,14 @@ button_6 = Button(root, text='6', padx=30, pady=20, command=lambda: button_click
 button_7 = Button(root, text='7', padx=30, pady=20, command=lambda: button_click(7))
 button_8 = Button(root, text='8', padx=30, pady=20, command=lambda: button_click(8))
 button_9 = Button(root, text='9', padx=30, pady=20, command=lambda: button_click(9))
-button_0 = Button(root, text='0', padx=90, pady=20, command=lambda: button_click(0))
+button_0 = Button(root, text='0', padx=81, pady=20, command=lambda: button_click(0))
 button_dot = Button(root, text = '.', padx= 33, pady=20, command=lambda: button_click('.'))
 button_add = Button(root, text='+', padx=30, pady=20, command=button_add)
 button_subtract = Button(root, text='-', padx=30, pady=20, command=button_subtract)
 button_multiply = Button(root, text='x', padx=30, pady=20, command=button_multiply)
 button_divide = Button(root, text='/', padx=31, pady=20, command=button_divide)
-button_equal = Button(root, text='=', padx=82, pady=20, command=button_equal)
-button_clear = Button(root, text='Clear', padx=79, pady=20, command=button_clear)
+button_equal = Button(root, text='=', padx=81, pady=20, command=button_equal)
+button_clear = Button(root, text='Clear', padx=70, pady=20, command=button_clear)
 
 # put the buttons on the screen
 button_1.grid(row=3, column=0)
