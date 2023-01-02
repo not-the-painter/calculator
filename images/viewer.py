@@ -7,10 +7,10 @@ root.iconbitmap("images/imagefile.icns")
 
 my_img1 = ImageTk.PhotoImage(Image.open("images/giphy.gif"))
 my_img2 = ImageTk.PhotoImage(Image.open("images/38 Via Lambruschini, Capistrano, Italy.jpg"))
-my_img3 = ImageTk.PhotoImage(Image.open("images/IMG_0134_cropped.JPG"))
-my_img4 = ImageTk.PhotoImage(Image.open("images/IMG_0135.JPG"))
-my_img5 = ImageTk.PhotoImage(Image.open("images/IMG_0159_cropped.JPG"))
-my_img6 = ImageTk.PhotoImage(Image.open("images/my_loulou.JPG"))
+my_img3 = ImageTk.PhotoImage(Image.open("images/dazzle.png"))
+my_img4 = ImageTk.PhotoImage(Image.open("images/IMG_4090.jpeg"))
+my_img5 = ImageTk.PhotoImage(Image.open("images/IMG_4112.jpeg"))
+my_img6 = ImageTk.PhotoImage(Image.open("images/IMG_4127.jpeg"))
 
 image_list = [my_img1, my_img2, my_img3, my_img4, my_img5, my_img6]
 
@@ -31,7 +31,7 @@ def forward(image_num):
     button_back.grid(row=1, column=0)
     button_forward.grid(row=1, column=2)
 
-    if image_num == my_img6:
+    if image_num == 5:
         button_forward = Button(root, text=">>", state=DISABLED)
 
 def back(image_num):
@@ -48,7 +48,7 @@ def back(image_num):
     button_back.grid(row=1, column=0)
     button_forward.grid(row=1, column=2)
 
-    if image_num == my_img1:
+    if image_num == 1:
         button_back = Button(root, text="<<", state=DISABLED)
 
 
