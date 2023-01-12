@@ -4,22 +4,39 @@ import tkinter
 root = tkinter.Tk()
 root.title("Calculator App")
 
-# create functions
+expression = ""
 
 
+# create the functions (global variables are bad but this works for now)
 def write(val):
-    print(val)
+    global expression
+    expression += val
+    label_result.config(text=expression)
 
 
 def clear():
-    pass
+    global expression
+    expression = ""
+    label_result.config(text=expression)
 
 
 def calculate():
-    pass
+    global expression
+    if expression == "ERROR":
+        result = "ERROR"
+    elif expression != "":
+        try:
+            # eval can be bad but hsould be harmless in this case
+            result = eval(expression)
+        except (ZeroDivisionError, SyntaxError):
+            result = "ERROR"
+    else:
+        result = ""
+    label_result.config(text=result)
+    expression = str(result)
 
 
-label_result = tkinter.Label(root, text="567572")
+label_result = tkinter.Label(root, text="")
 label_result.grid(row=0, column=0, columnspan=4)
 
 button7 = tkinter.Button(root, text="7", command=lambda: write("7"))
