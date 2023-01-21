@@ -10,13 +10,15 @@ expression = ""
 # create the functions (global variables are bad but this works for now)
 def write(val):
     global expression
+    if expression == "0":
+        expression = ""
     expression += val
     label_result.config(text=expression)
 
 
 def clear():
     global expression
-    expression = ""
+    expression = "0"
     label_result.config(text=expression)
 
 
@@ -36,7 +38,7 @@ def calculate():
     expression = str(result)
 
 
-label_result = tkinter.Label(root, text="")
+label_result = tkinter.Label(root, text="0")
 label_result.grid(row=0, column=0, columnspan=4)
 
 button7 = tkinter.Button(root, text="7", command=lambda: write("7"))
