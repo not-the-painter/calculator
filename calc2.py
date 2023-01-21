@@ -26,7 +26,7 @@ def calculate():
         result = "ERROR"
     elif expression != "":
         try:
-            # eval can be bad but hsould be harmless in this case
+            # eval can be bad but should be harmless in this case
             result = eval(expression)
         except (ZeroDivisionError, SyntaxError):
             result = "ERROR"
