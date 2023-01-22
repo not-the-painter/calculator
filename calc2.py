@@ -39,7 +39,7 @@ def calculate():
 
 
 label_result = tkinter.Label(root, text="0")
-label_result.grid(row=0, column=0, columnspan=4)
+label_result.grid(row=0, column=0, columnspan=4, sticky="e")
 
 button7 = tkinter.Button(root, text="7", command=lambda: write("7"))
 button7.grid(row=1, column=0)
